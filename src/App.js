@@ -1,7 +1,7 @@
-import React from "react";
-import AppContainer from "./pages/AppContainer";
-import IntlProvider from "./components/IntlProvider";
-import GlobalStyle from "./globalStyles";
+import React from 'react'
+import AppContainer from './pages/AppContainer'
+import IntlProvider from './components/IntlProvider'
+import GlobalStyle from './globalStyles'
 
 const App = () => {
   return (
@@ -9,7 +9,7 @@ const App = () => {
       <GlobalStyle />
       <AppContainer />
     </IntlProvider>
-  );
-};
+  )
+}
 
-export default App;
+export default App
