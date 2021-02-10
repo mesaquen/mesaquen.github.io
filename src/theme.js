@@ -4,7 +4,7 @@ export default {
     L: '1.25rem',
     M: '1rem',
     S: '0.75rem',
-    XS: '0.5rem',  
+    XS: '0.5rem',
     XXS: '0.25rem',
   },
   color: {
@@ -12,7 +12,7 @@ export default {
     secondaryTextIcons: '#777',
     darkBackground: '#222',
     background: '#444',
-    accent: 'turquoise'
+    accent: 'turquoise',
   },
   spacing: {
     default: '1rem',

@@ -27,7 +27,13 @@ const Avatar = ({ username, ...props }) => {
           show={!loading}
         />
       </CircleContainer>
-      {loading ? <InputPlaceholder /> : <Link><Typo>{`@${username}`}</Typo></Link>}
+      {loading ? (
+        <InputPlaceholder />
+      ) : (
+        <Link>
+          <Typo>{`@${username}`}</Typo>
+        </Link>
+      )}
     </Flex>
   )
 }

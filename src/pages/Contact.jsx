@@ -1,7 +1,8 @@
 import React from 'react'
+import { Container } from './PageStyles'
 
 const Contact = () => {
-  return <div>Contact</div>
+  return <Container>Contact</Container>
 }
 
 export default Contact
