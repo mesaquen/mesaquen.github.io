@@ -2,5 +2,10 @@
     "greeting": "Hi, I'm Mesaque Francisco",
     "greeting.bio": "Software developer with {count, plural, =0 {zero years} one {#+ year} other {#+ years}} of experience. Solid knowledge in modern frontend tools such as React, Redux, ES6+. I work best on teams that value good teamwork.",
     "easter.egg.binary": "1001001 100000 1010011 110010 100000 1000011 1001111 1000100 1001001 1001110 1000111",
-    "easter.egg.base64": "eyJuYW1lIjoiTWVzYXF1ZSIsImJpbyI6IlJvY2tpbicgb3V0IHNpbmNlIDkyIn0="
+    "easter.egg.base64": "eyJuYW1lIjoiTWVzYXF1ZSIsImJpbyI6IlJvY2tpbicgb3V0IHNpbmNlIDkyIn0=",
+
+    "coding": "Coding",
+    "developing": "Developing",
+    "testing": "Testing",
+    "sharing": "Sharing"
 }
