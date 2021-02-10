@@ -7,8 +7,8 @@ const GlobalStyle = createGlobalStyle`
 }
 body {
     font-family: sans-serif;
-    color: ${props => props.theme.color.primaryText};
-    background: #333
+    color: ${(props) => props.theme.color.primaryText};
+    background: ${({ theme }) => theme.color.background}
 }
 `
 

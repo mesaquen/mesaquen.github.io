@@ -9,8 +9,7 @@ export const Subtitle = styled.h2`
 `
 
 const Typo = styled.p`
-color: ${props => props.theme.color.secondaryTextIcons}
+  color: ${(props) => props.theme.color.secondaryTextIcons};
 `
 
 export default Typo
-

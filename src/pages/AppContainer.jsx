@@ -8,12 +8,12 @@ import Projects from './Projects'
 const AppContainer = (props) => {
   const { __ } = useI18n()
   return (
-      <div {...props}>
-        <Bio />
-        <Profile />
-        <Projects />
-        <Contact />
-      </div>
+    <div {...props}>
+      <Bio />
+      <Profile />
+      <Projects />
+      <Contact />
+    </div>
   )
 }
 
