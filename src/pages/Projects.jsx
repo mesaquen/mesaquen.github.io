@@ -1,11 +1,11 @@
 import React from 'react'
 import { useTheme } from 'styled-components'
-import { Container } from './PageStyles'
+import Flex from '../components/Flex'
 
 const Projects = () => {
   const theme = useTheme()
   return (
-    <Container backgroundColor={theme.color.darkBackground}>Projects</Container>
+    <Flex>Projects</Flex>
   )
 }
 

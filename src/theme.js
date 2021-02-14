@@ -7,6 +7,9 @@ export default {
     XS: '0.5rem',
     XXS: '0.25rem',
   },
+
+  sizing: (number = 1) => `${number}rem`,
+
   color: {
     primaryText: '#ccc',
     secondaryTextIcons: '#777',

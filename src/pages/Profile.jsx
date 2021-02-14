@@ -15,11 +15,11 @@ const Profile = () => {
 
   const words = [
     __('react', { defaultMessage: 'React' }),
-    __('coding'),
+    __('learning'),
     __('react.native', { defaultMessage: 'React Native' }),
     __('pizza', { defaultMessage: 'Pizza' }),
     __('no.sql', { defaultMessage: 'NoSQL' }),
-    __('js', { defaultMessage: 'EcmaScript' }),
+    __('js', { defaultMessage: 'ECMAScript' }),
     __('frontend', { defaultMessage: 'Frontend' }),
     __('sharing'),
     __('testing'),
