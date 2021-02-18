@@ -5,6 +5,7 @@ import Flex from 'components/Flex'
 import Typo, { Title as TitleComponent } from 'components/Typo'
 import useI18n from '../hooks/useI18n'
 import { getExperience } from '../utils/dateUtil'
+import LanguageSelector from 'components/LanguageSelector'
 
 const Container = styled(Flex)`
   align-items: center;
@@ -32,6 +33,7 @@ const Bio = () => {
   const count = getExperience()
   return (
     <Flex backgroundColor={theme.color.darkBackground}>
+      <LanguageSelector />
       <Container>
         <Flex maxWidth="30rem">
           <Title>{__('greeting')}</Title>

@@ -7,3 +7,8 @@ export const PROFILES_LINKS = {
   GITHUB: 'https://github.com/mesaquen',
   DEV: 'https://dev.to/mesaquen',
 }
+
+export const LANGUAGES = {
+  'pt-BR': 'pt-BR',
+  'en-US': 'en-US',
+}
