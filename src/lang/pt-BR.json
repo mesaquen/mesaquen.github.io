@@ -1,0 +1,12 @@
+{
+    "greeting": "Olá, eu sou Mesaque Francisco",
+    "greeting.bio": "Desenvolvedor de Software ha {count, plural, =0 {zero anos} one {#+ ano} other {#+ anos}}. Tenho sólido conhecimento em ferramentas de frontend como React, Redux, ES6+. Meu melhor sempre é com times que valorizam trabalho em equipe.",
+    "easter.egg.binary": "1001001 100000 1010011 110010 100000 1000011 1001111 1000100 1001001 1001110 1000111",
+    "easter.egg.base64": "eyJuYW1lIjoiTWVzYXF1ZSIsImJpbyI6IlJvY2tpbicgb3V0IHNpbmNlIDkyIn0=",
+
+    "learning": "Aprender",
+    "developing": "Desenvolvimento",
+    "testing": "Testes",
+    "sharing": "Compartilhar",
+    "recent.projects": "Projetos recentes no Github"
+}
