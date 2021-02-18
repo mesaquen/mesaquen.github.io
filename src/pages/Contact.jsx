@@ -12,7 +12,7 @@ const Link = styled(LinkComponent)`
 
 const Contact = () => {
   const theme = useTheme()
-  const iconSize = theme.sizing(6)
+  const iconSize = theme.sizing(4)
   return (
     <Flex
       backgroundColor={theme.color.darkBackground}

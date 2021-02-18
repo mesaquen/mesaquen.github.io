@@ -4,6 +4,7 @@ import { prepareRules } from '../../utils/styleUtil'
 const rules = prepareRules({
   display: 'display',
   width: 'width',
+  maxWidth: 'max-width',
   minHeight: 'min-height',
   justifyContent: 'justify-content',
   alignItems: 'align-items',

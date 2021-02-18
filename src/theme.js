@@ -10,7 +10,7 @@ export default {
 
   media: {
     tablet: '768px',
-    desktop: '900px'
+    desktop: '900px',
   },
 
   sizing: (number = 1) => `${number}rem`,
@@ -22,7 +22,7 @@ export default {
     background: '#444',
     lightBackground: '#666',
     accent: 'turquoise',
-    shadow: '#000A'
+    shadow: '#000A',
   },
   spacing: {
     default: '1rem',

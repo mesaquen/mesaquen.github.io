@@ -1,6 +1,6 @@
 import { makeObservable, action, observable, computed } from 'mobx'
 
-const sortByUpdatedAt = (a, b) => a.updated_at > b.updated_at ? -1 : 0
+const sortByUpdatedAt = (a, b) => (a.updated_at > b.updated_at ? -1 : 0)
 
 class ProjectStore {
   projects = []
@@ -12,7 +12,7 @@ class ProjectStore {
       lastFetched: observable,
       setProjects: action.bound,
       setLastFetched: action.bound,
-      latestProjects: computed
+      latestProjects: computed,
     })
   }
 
@@ -24,8 +24,8 @@ class ProjectStore {
     this.lastFetched = lastFetched
   }
 
-  get latestProjects () {
-      return this.projects.slice().sort(sortByUpdatedAt).slice(0, 10)
+  get latestProjects() {
+    return this.projects.slice().sort(sortByUpdatedAt).slice(0, 10)
   }
 }
 

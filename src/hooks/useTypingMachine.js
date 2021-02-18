@@ -15,7 +15,7 @@ const useTypingMachine = (
     const fullText = words[index]
 
     const nextCharIndex = isDeleting ? display.length - 1 : display.length + 1
-    let nextDelta = parseInt(typeDelay  - Math.random() * 100)
+    let nextDelta = parseInt(typeDelay - Math.random() * 100)
 
     if (isDeleting) {
       nextDelta /= 2

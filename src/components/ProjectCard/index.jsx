@@ -11,13 +11,13 @@ const Icon = styled(FaGithub)`
 `
 const ProjectCard = ({ name, html_url }) => {
   return (
-    <Link href={html_url} target="_blank" >
-    <Card justifyContent="space-between">
-      <CardHeader>
-        <Subtitle>{name}</Subtitle>
-      </CardHeader>
-      <Icon />
-    </Card>
+    <Link href={html_url} target="_blank">
+      <Card justifyContent="space-between">
+        <CardHeader>
+          <Subtitle>{name}</Subtitle>
+        </CardHeader>
+        <Icon />
+      </Card>
     </Link>
   )
 }

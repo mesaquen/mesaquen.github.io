@@ -1,29 +1,36 @@
 import React, { useEffect } from 'react'
-import { useTheme } from 'styled-components'
+import styled, { useTheme } from 'styled-components'
 import { observer } from 'mobx-react-lite'
 import Flex from 'components/Flex'
 import ProjectCard from 'components/ProjectCard'
 import ProjectsStore from 'mobx/ProjectsStore'
 import { fetchUserRepos } from 'logic/UserLogic'
-import {CardGrid} from './PageStyles'
+import { CardGrid } from './PageStyles'
+import { Subtitle } from 'components/Typo'
+import useI18n from 'hooks/useI18n'
+const Text = styled(Subtitle)`
+  margin-bottom: ${({ theme }) => theme.spacing.default};
+`
 
 const Projects = observer(() => {
   const { latestProjects, lastFetched } = ProjectsStore
-  const theme = useTheme()
+  const { __ } = useI18n()
 
   useEffect(() => {
-    fetchUserRepos('mesaquen').then(repos => {
+    fetchUserRepos('mesaquen').then((repos) => {
       ProjectsStore.setProjects(repos)
       ProjectsStore.setLastFetched(new Date())
     })
   }, [])
 
+  const renderItem = (item) => <ProjectCard key={item.id} {...item} />
 
-const renderItem = (item) => (<ProjectCard key={item.id} {...item}/>)
-
-  return <CardGrid>
-    {latestProjects.map(renderItem)}
-  </CardGrid>
+  return (
+    <Flex>
+      <Text>{__('recent.projects')}</Text>
+      <CardGrid>{latestProjects.map(renderItem)}</CardGrid>
+    </Flex>
+  )
 })
 
 export default Projects

@@ -1,10 +1,22 @@
 import React from 'react'
 import styled, { useTheme } from 'styled-components'
-import Avatar from '../components/Avatar'
-import Typo, { Title as TitleComponent } from '../components/Typo'
+import Avatar from 'components/Avatar'
+import Flex from 'components/Flex'
+import Typo, { Title as TitleComponent } from 'components/Typo'
 import useI18n from '../hooks/useI18n'
 import { getExperience } from '../utils/dateUtil'
-import { Container } from './PageStyles'
+
+const Container = styled(Flex)`
+  align-items: center;
+  @media (min-width: ${({ theme }) => theme.media.tablet}) {
+    min-height: 30rem;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+`
 
 const Title = styled(TitleComponent)`
   width: fit-content;
@@ -19,20 +31,17 @@ const Bio = () => {
   const theme = useTheme()
   const count = getExperience()
   return (
-    <Container backgroundColor={theme.color.darkBackground}>
-      <Container justifyContent="center">
-        <Title>{__('greeting')}</Title>
-        <Text>{__('greeting.bio', { count })}</Text>
+    <Flex backgroundColor={theme.color.darkBackground}>
+      <Container>
+        <Flex maxWidth="30rem">
+          <Title>{__('greeting')}</Title>
+          <Text>{__('greeting.bio', { count })}</Text>
+        </Flex>
+        <Flex>
+          <Avatar username="mesaquen" />
+        </Flex>
       </Container>
-      <Container
-        grow={1}
-        shrink={0}
-        justifyContent="center"
-        alignItems="center"
-      >
-        <Avatar username="mesaquen" />
-      </Container>
-    </Container>
+    </Flex>
   )
 }
 
