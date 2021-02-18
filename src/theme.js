@@ -8,6 +8,11 @@ export default {
     XXS: '0.25rem',
   },
 
+  media: {
+    tablet: '768px',
+    desktop: '900px'
+  },
+
   sizing: (number = 1) => `${number}rem`,
 
   color: {
@@ -15,7 +20,9 @@ export default {
     secondaryTextIcons: '#777',
     darkBackground: '#222',
     background: '#444',
+    lightBackground: '#666',
     accent: 'turquoise',
+    shadow: '#000A'
   },
   spacing: {
     default: '1rem',

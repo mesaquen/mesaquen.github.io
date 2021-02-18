@@ -16,6 +16,16 @@ body {
     color: ${(props) => props.theme.color.primaryText};
     background: ${({ theme }) => theme.color.background}
 }
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 `
 
 export default GlobalStyle

@@ -19,8 +19,8 @@ const Bio = () => {
   const theme = useTheme()
   const count = getExperience()
   return (
-    <Container backgroundColor={theme.color.darkBackground} direction="row">
-      <Container justifyContent="center" width="40rem">
+    <Container backgroundColor={theme.color.darkBackground}>
+      <Container justifyContent="center">
         <Title>{__('greeting')}</Title>
         <Text>{__('greeting.bio', { count })}</Text>
       </Container>
