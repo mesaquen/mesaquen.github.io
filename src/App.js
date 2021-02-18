@@ -4,15 +4,18 @@ import IntlProvider from './components/IntlProvider'
 import GlobalStyle from './globalStyles'
 import theme from './theme'
 import { ThemeProvider } from 'styled-components'
+import { LanguageProvider } from 'context/LanguageContext'
 
 const App = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <IntlProvider>
-        <GlobalStyle />
-        <AppContainer />
-      </IntlProvider>
-    </ThemeProvider>
+    <LanguageProvider>
+      <ThemeProvider theme={theme}>
+        <IntlProvider>
+          <GlobalStyle />
+          <AppContainer />
+        </IntlProvider>
+      </ThemeProvider>
+    </LanguageProvider>
   )
 }
 
