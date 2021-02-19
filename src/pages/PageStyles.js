@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import Flex from '../components/Flex'
 import { prepareRules } from '../utils/styleUtil'
 
 const rules = prepareRules({

@@ -1,4 +1,4 @@
-export default {
+const theme = {
   sizes: {
     XL: '2.5rem',
     L: '1.25rem',
@@ -30,3 +30,5 @@ export default {
     small: '0.25',
   },
 }
+
+export default theme
