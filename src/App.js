@@ -8,7 +8,7 @@ import { LanguageProvider } from 'context/LanguageContext'
 import ReactGA from 'react-ga'
 
 if (process.env.NODE_ENV === 'production') {
-  ReactGA.initialize('G-264040013')
+  ReactGA.initialize('G-H711591LPV')
   ReactGA.pageview(window.location.pathname + window.location.search);
 }
 
