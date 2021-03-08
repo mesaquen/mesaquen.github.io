@@ -9,6 +9,7 @@ import ReactGA from 'react-ga'
 
 if (process.env.NODE_ENV === 'production') {
   ReactGA.initialize('G-264040013')
+  ReactGA.pageview(window.location.pathname + window.location.search);
 }
 
 const App = () => {
