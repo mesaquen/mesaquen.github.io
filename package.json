@@ -14,8 +14,11 @@
     "react-dom": "^17.0.1",
     "react-ga": "^3.3.0",
     "react-icons": "^4.2.0",
+    "react-intl": "^5.20.10",
     "react-scripts": "4.0.2",
-    "web-vitals": "^1.0.1"
+    "styled-components": "^5.3.1",
+    "web-vitals": "^1.0.1",
+    "winston": "^3.3.3"
   },
   "scripts": {
     "start": "react-scripts start",
