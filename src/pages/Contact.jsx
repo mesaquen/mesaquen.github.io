@@ -19,15 +19,31 @@ const Contact = () => {
       direction="row"
       justifyContent="center"
     >
-      <Link href={PROFILES_LINKS.LINKED_IN} target="_blank">
+      <Link
+        href={PROFILES_LINKS.LINKED_IN}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Linkedin page"
+      >
         <FaLinkedin size={iconSize} />
       </Link>
 
-      <Link href={PROFILES_LINKS.DEV} target="_blank" spaceAround>
+      <Link
+        href={PROFILES_LINKS.DEV}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Dev.to page"
+        spaceAround
+      >
         <FaDev size={iconSize} />
       </Link>
 
-      <Link href={PROFILES_LINKS.GITHUB} target="_blank">
+      <Link
+        href={PROFILES_LINKS.GITHUB}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Github page"
+      >
         <FaGithub size={iconSize} />
       </Link>
     </Flex>

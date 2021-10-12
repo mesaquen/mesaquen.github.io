@@ -17,7 +17,7 @@ const theme = {
 
   color: {
     primaryText: '#ccc',
-    secondaryTextIcons: '#777',
+    secondaryTextIcons: '#999',
     darkBackground: '#222',
     background: '#444',
     lightBackground: '#666',

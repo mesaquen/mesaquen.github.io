@@ -23,6 +23,7 @@ const Avatar = ({ username, ...props }) => {
       <CircleContainer>
         <Image
           src={imageUrl}
+          alt={`${username} avatar`}
           onLoad={() => setTimeout(() => setLoading(false), 1000)}
           show={!loading}
         />
@@ -30,7 +31,11 @@ const Avatar = ({ username, ...props }) => {
       {loading ? (
         <InputPlaceholder />
       ) : (
-        <Link>
+        <Link
+          href={`https://github.com/${username}`}
+          aria-label={`${username} github page`}
+          rel="noreferrer noopener"
+        >
           <Typo>{`@${username}`}</Typo>
         </Link>
       )}
