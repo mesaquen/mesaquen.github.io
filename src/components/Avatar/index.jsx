@@ -3,23 +3,17 @@ import Flex from '../Flex'
 import { Subtitle as Typo } from '../Typo'
 import { CircleContainer, InputPlaceholder, Image } from './styles'
 import Link from '../Link'
-import { fetchUser } from '../../logic/UserLogic'
-import logger from '../../utils/logger'
 
 const Avatar = ({ username, ...props }) => {
   const [loading, setLoading] = useState(true)
   const [imageUrl, setImageUrl] = useState('')
 
   useEffect(() => {
-    fetchUser(username)
-      .then((user) => {
-        setImageUrl(user?.avatar_url)
-      })
-      .catch(logger.error)
+    setImageUrl(`https://github.com/${username}.png`)
   }, [username])
 
   return (
-    <Flex alignItems="center">
+    <Flex {...props} alignItems="center">
       <CircleContainer>
         <Image
           src={imageUrl}
