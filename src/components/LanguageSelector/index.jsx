@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import LanguageContext from 'context/LanguageContext'
 import ReactGA from 'react-ga'
 import { LANGUAGES } from 'Constants'
@@ -7,6 +7,10 @@ import { Button } from './styles'
 const LanguageSelector = () => {
   const { language, setLanguage } = useContext(LanguageContext)
   const languages = Object.keys(LANGUAGES)
+
+  useEffect(() => {
+    document.querySelector('html').lang = language
+  }, [language])
 
   const defineLanguage = (locale) => {
     setLanguage(locale)
