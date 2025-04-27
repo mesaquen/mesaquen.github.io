@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { redirect } from "next/navigation";
+import { notFound } from "next/navigation";
 import { LOCALES } from "../../i18n/locales";
 import { NextIntlClientProvider } from "next-intl";
-import { getDictionary } from "@/dictionaries";
+import { getDictionary, LocaleType } from "@/dictionaries";
 
 const ROUTE_LOCALES = LOCALES.map((locale) => ({ locale }));
 
@@ -21,7 +21,7 @@ export default async function RootLayout({
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale: LocaleType }>;
 }>) {
   const { locale } = await params;
   const messages = await getDictionary(locale);
@@ -38,5 +38,5 @@ export default async function RootLayout({
     );
   }
 
-  redirect("/pt");
+  notFound();
 }

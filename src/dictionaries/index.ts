@@ -5,9 +5,8 @@ const dictionaries = {
   pt: () => import("./pt.json").then((module) => module.default),
 };
 
-type LocaleType = keyof typeof dictionaries;
+export type LocaleType = keyof typeof dictionaries;
 
-export function getDictionary(locale: string) {
-  const [lang] = locale?.split("-") ?? "";
-  return dictionaries[lang as LocaleType]();
+export function getDictionary(locale: LocaleType) {
+  return dictionaries[locale]();
 }
