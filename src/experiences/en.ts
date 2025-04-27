@@ -1,4 +1,5 @@
-import { IExperience, SKILLS } from ".";
+import { IExperience } from ".";
+import { SKILLS } from "./skills";
 
 export const experiences: IExperience[] = [
   {

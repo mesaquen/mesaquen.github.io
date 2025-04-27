@@ -1,14 +1,14 @@
-import { getDictionary } from "@/dictionaries";
-import { getExperience } from "@/experiences";
+"use client";
 
-export default async function About({
-  params,
-}: Readonly<{
-  params: Promise<{ lang: string }>;
-}>) {
-  const { lang } = await params;
-  const t = await getDictionary(lang);
-  const experiences = await getExperience(lang);
+import { getExperience } from "@/experiences";
+import { useTranslations } from "next-intl";
+import Link from "next/link";
+import { useParams } from "next/navigation";
+
+export default function About() {
+  const { locale } = useParams();
+  const experiences = getExperience(locale as string);
+  const t = useTranslations();
   return (
     <div>
       {experiences.map((experience) => (
@@ -23,11 +23,13 @@ export default async function About({
           <p>{experience.description}</p>
           {experience.achievements?.length && (
             <>
-              <h3>{t.achievements}</h3>
+              <h3>{t("achievements")}</h3>
 
-              <ul>{experience.achievements?.map(achievement => (
-                <li key={achievement}>{achievement}</li>
-              ))}</ul>
+              <ul>
+                {experience.achievements?.map((achievement) => (
+                  <li key={achievement}>{achievement}</li>
+                ))}
+              </ul>
             </>
           )}
 
@@ -38,6 +40,8 @@ export default async function About({
           </div>
         </div>
       ))}
+
+      <Link href={`/${locale}/skills`}>habilidades</Link>
     </div>
   );
 }
