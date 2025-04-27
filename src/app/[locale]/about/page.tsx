@@ -1,8 +1,8 @@
 "use client";
 
 import { getExperience } from "@/experiences";
+import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 import { useParams } from "next/navigation";
 
 export default function About() {
@@ -41,7 +41,7 @@ export default function About() {
         </div>
       ))}
 
-      <Link href={`/${locale}/skills`}>habilidades</Link>
+      <Link href="/skills">habilidades</Link>
     </div>
   );
 }
