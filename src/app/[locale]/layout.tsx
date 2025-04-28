@@ -25,13 +25,14 @@ export default async function RootLayout({
 }>) {
   const { locale } = await params;
   const messages = await getDictionary(locale);
+  console.log(messages)
 
   if (LOCALES.includes(locale)) {
     return (
       <html lang={locale}>
         <body>
           <NextIntlClientProvider locale={locale} messages={messages}>
-            {children}
+            <main className="m-auto container">{children}</main>
           </NextIntlClientProvider>
         </body>
       </html>
