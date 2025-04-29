@@ -9,7 +9,7 @@ export function TagLabel({
 }) {
 
   const spacingClasses = compact ? "px-2 text-sm" : "py-2 px-4"
-  const defaultClasses = 'dark:text-black bg-indigo-200 rounded-full'
+  const defaultClasses = 'bg-teal-300 dark:bg-teal-700 rounded-full'
 
   const classes = [defaultClasses, spacingClasses, className].join(' ')
   return (

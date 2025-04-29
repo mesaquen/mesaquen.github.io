@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { LOCALES } from "../../i18n/locales";
+import { LOCALES, LocaleType } from "../../i18n/locales";
 import { NextIntlClientProvider } from "next-intl";
-import { getDictionary, LocaleType } from "@/dictionaries";
+import { getDictionary } from "@/dictionaries";
 
 const ROUTE_LOCALES = LOCALES.map((locale) => ({ locale }));
 
@@ -25,7 +25,6 @@ export default async function RootLayout({
 }>) {
   const { locale } = await params;
   const messages = await getDictionary(locale);
-  console.log(messages)
 
   if (LOCALES.includes(locale)) {
     return (

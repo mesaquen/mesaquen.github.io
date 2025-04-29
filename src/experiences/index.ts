@@ -1,8 +1,7 @@
+import { LocaleType } from "@/i18n/locales";
 import { experiences as en } from "./en";
 import { experiences as pt } from "./pt";
 import { SKILLS } from "./skills";
-
-type LocaleType = keyof typeof dictionaries;
 
 const dictionaries = {
   en,
@@ -20,7 +19,6 @@ export interface IExperience {
   skills: SKILLS[];
 }
 
-export function getExperience(locale: string) {
-  const [lang] = locale?.split("-") ?? [];
-  return dictionaries[lang as LocaleType];
+export function getExperience(locale: LocaleType) {
+  return dictionaries[locale];
 }
