@@ -17,6 +17,6 @@ export function dateToLocaleString({
 
   return time.toLocaleDateString(locale, {
     year: "numeric",
-    month: "long",
+    month: "short",
   });
 }

@@ -20,17 +20,18 @@ export function ExperienceList({
         <div key={`${experience.company}-${experience.startDate}`}>
           <div className="flex flex-row justify-between items-end mb-2">
             <div className="flex flex-col">
-              <h2 className="text-orange-600 dark:text-orange-400 text-2xl font-bold">
+              <h2 className="text-orange-600 dark:text-orange-400 text-xl lg:text-2xl font-bold">
                 {experience.company}
               </h2>
               <p className="text-xl">{experience.title}</p>
             </div>
-            <div className="flex flex-row gap-x-2">
+            <div className="shrink-0 flex flex-row gap-x-2">
               <TagLabel
                 message={dateToLocaleString({
                   date: experience.startDate,
                   locale: locale as LocaleType,
                 })}
+                compact
               />
               <TagLabel
                 message={
@@ -41,6 +42,7 @@ export function ExperienceList({
                       })
                     : t("current")
                 }
+                compact
               />
             </div>
           </div>
