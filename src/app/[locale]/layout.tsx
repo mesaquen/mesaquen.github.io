@@ -6,10 +6,21 @@ import { getDictionary } from "@/dictionaries";
 
 const ROUTE_LOCALES = LOCALES.map((locale) => ({ locale }));
 
-export const metadata: Metadata = {
+const meta = {
   title: "Mesaque Francisco",
   description:
     "Software, next.js, react, react native, javascript, typescript.",
+};
+
+export const metadata: Metadata = {
+  title: meta.title,
+  description: meta.description,
+  openGraph: {
+    type: "website",
+    description: meta.description,
+    title: meta.title,
+    url: 'https://mesaquen.github.io'
+  },
 };
 
 export async function generateStaticParams() {
