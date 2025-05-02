@@ -11,7 +11,8 @@ export enum SKILLS {
   NEW_RELIC = "New Relic",
   GA = "Google Analytics",
   GTM = "Google Tag Manager",
-  STORE_DEPLOY = "Apple Store and Google Play deployments",
+  APP_STORE_DEPLOY = "App Store",
+  PLAY_STORE_DEPLOY = "Google Play",
   MICROSERVICES = "Microservices",
   REST = "RESTfull API",
   STYLED_COMPONENTS = "Styled Components",
@@ -20,4 +21,8 @@ export enum SKILLS {
   REDUX = "Redux",
   JAVA = "Java",
   MOBX = "MobX",
+  CAMERA = "Camera interaction",
+  GPS_TRACKING = "GPS tracking",
+  NATIVE_MODULES = "Native modules",
+  PUSH_NOTIFICATION = "Push notifications"
 }

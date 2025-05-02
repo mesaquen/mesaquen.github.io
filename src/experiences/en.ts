@@ -14,13 +14,15 @@ export const experiences: IExperience[] = [
       SKILLS.REACT,
       SKILLS.REACT_NATIVE,
       SKILLS.FIREBASE,
+      SKILLS.PUSH_NOTIFICATION,
       SKILLS.GRAPHQL,
       SKILLS.GA,
       SKILLS.GTM,
       SKILLS.MAGENTO,
       SKILLS.NEW_RELIC,
       SKILLS.PWA_STUDIO,
-      SKILLS.STORE_DEPLOY,
+      SKILLS.APP_STORE_DEPLOY,
+      SKILLS.PLAY_STORE_DEPLOY,
       SKILLS.TALWIND,
       SKILLS.TYPESCRIPT,
       SKILLS.CI_CD,
@@ -93,6 +95,9 @@ export const experiences: IExperience[] = [
       SKILLS.MICROSERVICES,
       SKILLS.REST,
       SKILLS.JAVA,
+      SKILLS.CAMERA,
+      SKILLS.NATIVE_MODULES,
+      SKILLS.GPS_TRACKING
     ],
 
     achievements: [

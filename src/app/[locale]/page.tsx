@@ -13,7 +13,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex gap-y-12 flex-col lg:flex-row h-lvh justify-center items-center">
+    <div className="flex gap-y-12 flex-col lg:flex-row max-w-screen h-lvh justify-center items-center">
       <Header
         title={t("salutation")}
         subtitle={t("job-title")}

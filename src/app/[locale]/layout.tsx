@@ -44,7 +44,7 @@ export default async function RootLayout({
         <body>
           <NextIntlClientProvider locale={locale} messages={messages}>
             <NavMenu />
-            <main className="m-auto container pt-16">{children}</main>
+            <main className="m-auto lg:container pt-16 max-w-screen">{children}</main>
           </NextIntlClientProvider>
         </body>
       </html>

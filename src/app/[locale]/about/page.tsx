@@ -19,7 +19,7 @@ export default function About() {
     <div className="text-lg p-4 gap-8 flex flex-col lg:flex-row items-start pt-12">
       <section className={`${boxStyles} animate-fade-in lg:sticky lg:top-28 lg:flex-1/3`}>
         <div className="flex gap-4 items-center">
-          <div className="animate-fade-in-300 rounded-full border-2 aspect-square overflow-clip relative min-h-40">
+          <div className="animate-fade-in-300 rounded-full border-2 aspect-square overflow-clip relative min-h-32 lg:min-h-40">
             <Image
               className="relative object-cover"
               src="/mesaque_512.webp"

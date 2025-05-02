@@ -17,9 +17,9 @@ export function ExperienceList({
   return (
     <>
       {experiences.map((experience) => (
-        <div key={`${experience.company}-${experience.startDate}`}>
-          <div className="flex flex-row justify-between items-end mb-2">
-            <div className="flex flex-col">
+        <div key={`${experience.company}-${experience.startDate}`} className="not-[:last-child]:border-b-1 pb-8 border-gray-300 dark:border-gray-800">
+          <div className="flex flex-col justify-between lg:flex-row lg:items-end mb-2">
+            <div className="flex flex-col lg:flex-col">
               <h2 className="text-orange-600 dark:text-orange-400 text-xl lg:text-2xl font-bold">
                 {experience.company}
               </h2>
