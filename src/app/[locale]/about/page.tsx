@@ -17,9 +17,9 @@ export default function About() {
     "bg-white dark:bg-[#333] rounded-lg shadow-xl shadow-gray-400 dark:shadow-black p-8 flex gap-8 items-start flex-col";
   return (
     <div className="text-lg p-4 gap-8 flex flex-col lg:flex-row items-start pt-12">
-      <section className={`${boxStyles} animate-fade-in lg:sticky lg:top-28 lg:flex-1/3`}>
+      <section className={`${boxStyles} motion-safe:animate-fade-in lg:sticky lg:top-28 lg:flex-1/3`}>
         <div className="flex gap-4 items-center">
-          <div className="animate-fade-in-300 rounded-full border-2 aspect-square overflow-clip relative min-h-32 lg:min-h-40">
+          <div className="motion-safe:animate-fade-in-300 rounded-full border-2 aspect-square overflow-clip relative min-h-32 lg:min-h-40">
             <Image
               className="relative object-cover"
               src="/mesaque_512.webp"
@@ -35,7 +35,7 @@ export default function About() {
         </div>
         <p>{t("biography")}</p>
       </section>
-      <section className={`${boxStyles} animate-fade-in lg:flex-2/3`}>
+      <section className={`${boxStyles} motion-safe:animate-fade-in lg:flex-2/3`}>
         <h1 className="flex gap-4 text-3xl font-bold items-center">
           <Icon.File size={32} />
           {t("experiences")}

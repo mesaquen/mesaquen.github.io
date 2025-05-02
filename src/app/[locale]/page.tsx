@@ -20,11 +20,9 @@ export default function Home() {
         link="/about"
         linkText={t("about")}
       />
-      <div className="animate-fade-in-300 w-full p-4 md:p-0 md:w-1/2 md:max-w-2xl">
+      <div className="motion-safe:animate-fade-in-300 w-full p-4 md:p-0 md:w-1/2 md:max-w-2xl">
         <LazyLottie
           {...animationOptions}
-          role="image"
-          aria-label={t("animation")}
         />
       </div>
     </div>
