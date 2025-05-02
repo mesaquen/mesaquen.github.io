@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { LOCALES, LocaleType } from "../../i18n/locales";
 import { NextIntlClientProvider } from "next-intl";
 import { getDictionary } from "@/dictionaries";
+import { NavMenu } from "@/components/NavMenu";
 
 const ROUTE_LOCALES = LOCALES.map((locale) => ({ locale }));
 
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     type: "website",
     description: meta.description,
     title: meta.title,
-    url: 'https://mesaquen.github.io'
+    url: "https://mesaquen.github.io",
   },
 };
 
@@ -42,7 +43,8 @@ export default async function RootLayout({
       <html lang={locale}>
         <body>
           <NextIntlClientProvider locale={locale} messages={messages}>
-            <main className="m-auto container">{children}</main>
+            <NavMenu />
+            <main className="m-auto container pt-16">{children}</main>
           </NextIntlClientProvider>
         </body>
       </html>

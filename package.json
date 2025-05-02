@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@deemlol/next-icons": "^0.1.9",
     "@formatjs/intl-localematcher": "^0.6.1",
     "lottie-react": "^2.4.1",
     "negotiator": "^1.0.0",
