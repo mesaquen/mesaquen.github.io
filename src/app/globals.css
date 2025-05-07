@@ -13,10 +13,13 @@
 
 
 
-  --animate-fade-in: fade-in 1s ease-in-out;
-  --animate-fade-in-300: 1s fade-in 300ms ease-in-out backwards;
-  --animate-fade-in-500: 1s fade-in 500ms ease-in-out backwards;
-  --animate-fade-in-700: 1s fade-in 700ms ease-in-out backwards;
+  --animate-fade-in: fade-in 1s ease-out;
+  --animate-fade-in-300: 1s fade-in 300ms ease-out backwards;
+  --animate-fade-in-500: 1s fade-in 500ms ease-out backwards;
+  --animate-fade-in-700: 1s fade-in 700ms ease-out backwards;
+
+
+  --animate-fast-fade-in: fade-in 300ms ease-out;
 
   @keyframes fade-in {
     0% {
@@ -26,7 +29,7 @@
 
     100% {
       transform: translateX(0);
-      opacity: 111;
+      opacity: 1;
     }
   }
 }

@@ -4,8 +4,12 @@ import { Link } from "@/i18n/navigation";
 import { useTranslations, useLocale } from "next-intl";
 import { usePathname } from "next/navigation";
 import * as Icon from "@deemlol/next-icons";
+import { LocaleSwitcher } from "../LocaleSwitcher";
+import { MobileMenu } from "./MobileMenu";
+import { createPortal } from "react-dom";
+import { useState } from "react";
 
-type NavigationLink = {
+export type NavigationLink = {
   href: string;
   title: string;
 };
@@ -31,17 +35,23 @@ export function NavMenu() {
   const pathname = usePathname();
   const route = pathname.replace(`/${locale}`, "");
 
+  const [shouldDisplayMenu, setDisplayMenu] = useState(false);
+
+  function getNavigationClass(link: NavigationLink): string {
+    return route.length && link.href.includes(route)
+      ? "border-white"
+      : "border-black";
+  }
+
   return (
-    <nav className="max-w-screen z-100 text-white bg-black flex fixed top-0 left-0 right-0 h-20">
+    <nav className="max-w-screen z-90 text-white bg-black flex fixed top-0 left-0 right-0 h-20">
       <div className="container m-auto px-6 flex flex-row justify-between items-center">
         <span className="text-2xl">{t("name")}</span>
-        <div className="flex flex-row gap-8 items-center">
+        <div className="justify-end flex flex-row gap-2 lg:gap-8 items-center">
           <ul className="text-lg hidden lg:flex flex-row gap-8 pr-8 border-r-2 border-gray-700">
             {navigationList.map((item) => {
-              const activeClass =
-                route.length && item.href.includes(route)
-                  ? "border-white"
-                  : "border-black";
+              const activeClass = getNavigationClass(item);
+
               return (
                 <li
                   className={`hover:text-primary transition-all cursor-pointer border-b-2 ${activeClass}`}
@@ -52,10 +62,26 @@ export function NavMenu() {
               );
             })}
           </ul>
-          <p className="flex gap-4"><Icon.Globe size={24} /> {locale}</p>
-          <Icon.Menu className="lg:hidden" size={32} />
+          <LocaleSwitcher />
+          <Icon.Menu
+            onClick={(event) => {
+              event.stopPropagation(); // prevent MobileMenu's react portal from capturing event
+              return setDisplayMenu(true);
+            }}
+            className="lg:hidden"
+            size={32}
+          />
         </div>
       </div>
+      {typeof document !== "undefined" &&
+        shouldDisplayMenu &&
+        createPortal(
+          <MobileMenu
+            onClose={() => setDisplayMenu(false)}
+            links={navigationList}
+          />,
+          document.body
+        )}
     </nav>
   );
 }
