@@ -4,6 +4,7 @@ import { LOCALES, LocaleType } from "../../i18n/locales";
 import { NextIntlClientProvider } from "next-intl";
 import { getDictionary } from "@/dictionaries";
 import { NavMenu } from "@/components/NavMenu";
+import { setRequestLocale } from "next-intl/server";
 
 const ROUTE_LOCALES = LOCALES.map((locale) => ({ locale }));
 
@@ -37,6 +38,8 @@ export default async function RootLayout({
 }>) {
   const { locale } = await params;
   const messages = await getDictionary(locale);
+
+  setRequestLocale(locale)
 
   if (LOCALES.includes(locale)) {
     return (
