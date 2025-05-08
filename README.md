@@ -4,6 +4,10 @@ This is my bio site source code. The idea was to create a PoC of an SSR applicat
 
 The application was built with i18n in mind, currently serving two languages. English and Portuguese.
 
+## Live demo
+
+Currently you can access the live demo at https://mesaquen.vercel.app.
+
 ## Challenges found
 
 During the development I found some limitations that are relevant. For instance, when using `output: "export"` in Next.js configuration, you loose access to a lot of Next.js features such as middlewares.
