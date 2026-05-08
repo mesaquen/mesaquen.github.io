@@ -3,6 +3,20 @@ import { SKILLS } from "./skills";
 
 export const experiences: IExperience[] = [
   {
+    title: "Senior developer",
+    company: "BNP Paribas",
+    startDate: "11-25",
+    endDate: "05-26",
+    description:
+      "As a frontend developer, my role was focused on creating interaces for an analytical platform for trading stocks.",
+    skills: [
+      SKILLS.REACT,
+      SKILLS.JAVA,
+      SKILLS.MICROSERVICES,
+      SKILLS.WEBSOCKETS,
+    ],
+  },
+  {
     title: "Developer",
     company: "Danone",
     startDate: "01-22",
@@ -97,7 +111,7 @@ export const experiences: IExperience[] = [
       SKILLS.JAVA,
       SKILLS.CAMERA,
       SKILLS.NATIVE_MODULES,
-      SKILLS.GPS_TRACKING
+      SKILLS.GPS_TRACKING,
     ],
 
     achievements: [

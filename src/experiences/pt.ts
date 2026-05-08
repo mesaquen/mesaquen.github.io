@@ -1,9 +1,14 @@
 import { IExperience } from ".";
 import { experiences as enExperiences } from "./en";
 
-const [danone, meta, disys, fcg, ws] = enExperiences;
+const [bnpp, danone, meta, disys, fcg, ws] = enExperiences;
 
 export const experiences: IExperience[] = [
+  {
+    ...bnpp,
+    description:
+      "Como desenvolvedor frontend, meu papel era focado em criar interaces para uma plataforma analítica de dados de ações.",
+  },
   {
     ...danone,
     description:

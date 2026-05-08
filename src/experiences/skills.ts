@@ -24,5 +24,6 @@ export enum SKILLS {
   CAMERA = "Camera interaction",
   GPS_TRACKING = "GPS tracking",
   NATIVE_MODULES = "Native modules",
-  PUSH_NOTIFICATION = "Push notifications"
+  PUSH_NOTIFICATION = "Push notifications",
+  WEBSOCKETS = "Websockets"
 }
