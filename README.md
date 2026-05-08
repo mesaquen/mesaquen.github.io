@@ -20,7 +20,7 @@ Also, you have to know ahead of time all of your paths/params values. Creating a
 
 ## Requirements
 
-- [NodeJS]
+- [NodeJS] v20 (lts/iron)
 
 ## How to run
 
