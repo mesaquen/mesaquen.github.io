@@ -9,26 +9,27 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@deemlol/next-icons": "^0.1.9",
-    "@formatjs/intl-localematcher": "^0.6.1",
+    "@deemlol/next-icons": "^0.2.7",
+    "@formatjs/intl-localematcher": "^0.8.6",
     "lottie-react": "^2.4.1",
     "negotiator": "^1.0.0",
-    "next": "^15.5.9",
-    "next-intl": "^4.1.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "next": "^16.2.6",
+    "next-intl": "^4.11.1",
+    "npm-check-updates": "^22.1.1",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
-    "@types/negotiator": "^0.6.3",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@eslint/eslintrc": "^3.3.5",
+    "@tailwindcss/postcss": "^4.3.0",
+    "@types/negotiator": "^0.6.4",
+    "@types/node": "^25.6.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
     "@types/react-lottie": "^1.2.10",
-    "eslint": "^9",
-    "eslint-config-next": "15.3.0",
+    "eslint": "^10.3.0",
+    "eslint-config-next": "16.2.6",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^6.0.3"
   }
 }

@@ -3,7 +3,7 @@ import { experiences as en } from "./en";
 import { experiences as pt } from "./pt";
 import { SKILLS } from "./skills";
 
-const dictionaries = {
+const dictionaries: Record<string, IExperience[]> = {
   en,
   pt,
 };

@@ -1,7 +1,7 @@
 import "server-only";
 import { LocaleType } from "@/i18n/locales";
 
-const dictionaries = {
+const dictionaries: Record<string, () => Promise<Record<string, string>>> = {
   en: () => import("./en.json").then((module) => module.default),
   pt: () => import("./pt.json").then((module) => module.default),
 };
