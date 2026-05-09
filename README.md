@@ -1,6 +1,6 @@
 # mesaquen.github.io
 
-This is my bio site source code. The idea was to create a PoC of an SSR application using [Next.js] v15 and [Tailwind] v4.
+This is my bio site source code. The idea was to create a PoC of an SSR application using [Next.js] v16 and [Tailwind] v4.
 
 The application was built with i18n in mind, currently serving two languages. English and Portuguese.
 
